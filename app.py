@@ -99,8 +99,6 @@ class Button:
             if pygame.mouse.get_pressed()[0] == 1:
                 self.clicked = True
                 print("jjjjjjjjjjjjj")
-            else:
-                self.cliked = False
         return self.clicked
 
 
@@ -226,6 +224,7 @@ def run():
                 reset_game(pipe_group, flappy, screen_height)
                 score = 0
                 flappy.game_over = False
+                button.clicked = False #Reset button flag
     
         draw_game(screen, background, background_floor, ground_scroll, bird_group, flappy, pipe_group, score, screen_width, button)
         
